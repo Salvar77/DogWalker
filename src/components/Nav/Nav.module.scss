@@ -419,6 +419,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    z-index: 10000;
 
     .langBtn,
     .walletBtn,
@@ -490,9 +491,11 @@
     gap: 2rem;
     list-style: none;
     padding: 2rem;
+    z-index: 1000;
   }
   .menuDesktopItem {
     font-size: 1.6rem;
     cursor: pointer;
+    z-index: 1000;
   }
 }
