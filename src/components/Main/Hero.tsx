@@ -49,8 +49,20 @@ const Hero: React.FC = () => {
       </div>
 
       <div className={classes.images}>
-        <Image src={BackgroundPhoneIconHero} alt="" className={classes.bg1} />
-        <Image src={BackgroundPhoneIconHero3} alt="" className={classes.bg2} />
+        <Image
+          src={BackgroundPhoneIconHero}
+          alt=""
+          className={classes.bg1}
+          width={isMobile ? 180 : undefined}
+          height={isMobile ? 180 : undefined}
+        />
+        <Image
+          src={BackgroundPhoneIconHero3}
+          alt=""
+          className={classes.bg2}
+          width={isMobile ? 180 : undefined}
+          height={isMobile ? 180 : undefined}
+        />
 
         <div className={classes.blurCenter}></div>
 
@@ -58,11 +70,15 @@ const Hero: React.FC = () => {
           src={BackgroundPhoneIconHeroRect}
           alt=""
           className={classes.dashed}
+          width={isMobile ? 50 : undefined}
+          height={isMobile ? 50 : undefined}
         />
         <Image
           src={BackgroundPhoneIconRect}
           alt=""
           className={classes.dotted}
+          width={isMobile ? 150 : undefined}
+          height={isMobile ? 150 : undefined}
         />
 
         <Image
@@ -76,15 +92,15 @@ const Hero: React.FC = () => {
           src={Vector2}
           alt=""
           className={classes.vector}
-          width={isMobile ? 120 : 215}
-          height={isMobile ? 120 : 215}
+          width={isMobile ? 100 : 215}
+          height={isMobile ? 100 : 215}
         />
         <div className={classes.phoneTop}>
           <Image
             src={PhoneIconHero}
             alt=""
-            width={isMobile ? 350 : 700}
-            height={isMobile ? 350 : 700}
+            width={isMobile ? 400 : 700}
+            height={isMobile ? 400 : 700}
           />
         </div>
 
@@ -92,8 +108,8 @@ const Hero: React.FC = () => {
           src={rocketIcon}
           alt=""
           className={classes.rocket}
-          width={isMobile ? 48 : undefined}
-          height={isMobile ? 48 : undefined}
+          width={isMobile ? 24 : undefined}
+          height={isMobile ? 24 : undefined}
         />
 
         <button className={classes.dogWalkerBtn}>DOG WALKER</button>
