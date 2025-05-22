@@ -210,8 +210,8 @@ export default function Nav({ isOpen, toggleNav }: NavProps) {
                         <ul className={classes.fullScreenModal}>
                           <button
                             className={classes.closeButton}
-                            onClick={handleNavToggle}
-                            aria-label={tc("menu")}
+                            onClick={() => setOpenModal(null)}
+                            aria-label={tc("closeSubmenu")}
                           >
                             ×
                           </button>

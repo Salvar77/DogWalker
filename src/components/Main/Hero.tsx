@@ -30,14 +30,17 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className={classes.hero}>
+    <section id="#pre-sale" className={classes.hero}>
       <div className={classes.tracesWrapper}>
         <Image src={DogTracesImage} alt="" />
       </div>
 
       <div className={classes.content}>
-        <h1 className={classes.title}>{t("title")}</h1>
-        <p className={classes.subtitle}>{t("subtitle")}</p>
+        <h1 className={classes.title}>{t("title")}</h1>{" "}
+        <p
+          className={classes.subtitle}
+          dangerouslySetInnerHTML={{ __html: t("subtitle") }}
+        />
         <p className={classes.tagline}>{t("tagline")}</p>
         <div className={classes.ctaGroup}>
           <button className={classes.ctaPrimary}>

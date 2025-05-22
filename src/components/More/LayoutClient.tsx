@@ -23,6 +23,7 @@ export default function LayoutClient({ children }: { children: ReactNode }) {
 
   return (
     <>
+      {" "}
       <div className={styles.ellipseWrapper}>
         <Image src={Ellipse1} alt="" width={700} height={700} priority />
       </div>

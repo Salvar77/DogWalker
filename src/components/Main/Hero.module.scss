@@ -7,12 +7,13 @@
   align-items: center;
   padding: 2rem 1rem;
   margin-top: 7rem;
+  padding-bottom: 10rem;
   background: transparent;
 }
 
 .tracesWrapper {
   position: absolute;
-  bottom: 15rem;
+  bottom: 21rem;
   left: 0;
   z-index: 10;
   order: 0;
@@ -27,13 +28,13 @@
 .title {
   font-family: "Bogart Trial", serif;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 .subtitle {
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
 }
 
@@ -42,6 +43,7 @@
   font-weight: 700;
   color: #ffb94a;
   margin-bottom: 1.5rem;
+  font-size: 2rem;
 }
 
 .ctaGroup {
@@ -194,7 +196,7 @@
 .phoneTop {
   position: absolute;
   top: 0;
-  left: 10%;
+  left: 12%;
   z-index: 6;
 }
 
@@ -251,7 +253,7 @@
   pointer-events: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 767px) {
   .hero {
     flex-direction: row;
     justify-content: space-between;
@@ -274,6 +276,10 @@
 
   .subtitle {
     font-size: 1.8rem;
+    strong {
+      font-weight: bold;
+      color: #000;
+    }
   }
 
   .tagline {
@@ -339,7 +345,7 @@
   .phoneTop {
     position: absolute;
     top: -6rem;
-    left: 1.45rem;
+    left: 2.4rem;
     z-index: 6;
     width: 100rem;
   }
@@ -347,7 +353,7 @@
   .rocket {
     position: absolute;
     top: 28rem;
-    left: 15.3rem;
+    left: 16.2rem;
     z-index: 7;
   }
 
@@ -365,7 +371,7 @@
     top: 17rem;
     right: 5rem;
     font-size: 1.4rem;
-    z-index: 1000;
+    z-index: 10;
   }
 
   .ctaGroup {
