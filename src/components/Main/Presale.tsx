@@ -10,7 +10,8 @@ import Vector from "@/assets/img/PreSaleVector.svg";
 import TokenIcon from "@/assets/img/TokenIcon1.svg";
 import RocketIcon from "@/assets/img/PresaleRocket.svg";
 import PresaleDogLogo from "@/assets/img/PresaleDogLogo.svg";
-import Ellipse from "@/assets/img/Ellipse 4.svg";
+import Ellipse from "@/assets/img/Ellipse 3.svg";
+import Ellipse2 from "@/assets/img/Ellipse 4.svg";
 import PreSaleArrow from "@/assets/img/PresaleArrow.svg";
 import PreSaleRectangleRight from "@/assets/img/PreSaleRectangleRight.svg";
 import PreSaleRectangleRightTwo from "@/assets/img/PreSaleRectangleRightTwo.svg";
@@ -40,40 +41,53 @@ const Presale: React.FC = () => {
         />
       </div>
 
-      <section className={classes.presale}>
+      <section className={classes.presale} id="pre-sale">
         {/* Heading and How to Buy button */}
         <div className={classes.header}>
           <h2 className={classes.heading}>{t("heading")}</h2>
           <button className={classes.howToBuy}>
             {t("howToBuy")}
             <span className={classes.arrow}>
-              <Image src={PreSaleArrow} alt="" width={7} />
+              <Image src={PreSaleArrow} alt="pre-sale arrow" width={7} />
             </span>
           </button>
         </div>
         {/** Decorative paw traces */}
         <Image
           src={PresaleDogTraces}
-          alt=""
+          alt="Ślady psa w tle sekcji Pre-sale"
           className={classes.dogTraces}
           width={isMobile ? 100 : undefined}
           height={isMobile ? 100 : undefined}
         />
+
         <Image
           src={PreSaleRectangleRight}
-          alt=""
+          alt="Dekoracyjny prostokąt po prawej stronie"
           className={classes.rectangle}
           width={isMobile ? 75 : undefined}
           height={isMobile ? 75 : undefined}
         />
+
         <Image
           src={PreSaleRectangleRightTwo}
-          alt=""
+          alt="Drugi dekoracyjny prostokąt po prawej stronie"
           className={classes.rectangleSecond}
           width={isMobile ? 100 : undefined}
           height={isMobile ? 100 : undefined}
         />
-        {/* <Image src={Ellipse} alt="" className={classes.ellipse} /> */}
+
+        <Image
+          src={Ellipse}
+          alt="Dekoracyjna elipsa"
+          className={classes.ellipse}
+        />
+
+        <Image
+          src={Ellipse2}
+          alt="Druga dekoracyjna elipsa"
+          className={classes.ellipseTwo}
+        />
 
         <div className={classes.presale__box}>
           {/** Box One: Price info + vector */}
@@ -84,8 +98,16 @@ const Presale: React.FC = () => {
               <span className={classes.listing}>
                 {t("listingPriceLabel")}:{t("listingPrice")}
               </span>
-              <Image src={Vector} alt="" className={classes.vector} />
-              <Image src={PresaleDogLogo} alt="" className={classes.dogLogo} />
+              <Image
+                src={Vector}
+                alt="Dekoracyjny element wektorowy w tle sekcji Presale"
+                className={classes.vector}
+              />
+              <Image
+                src={PresaleDogLogo}
+                alt="Logo psa w sekcji Presale"
+                className={classes.dogLogo}
+              />
             </div>
           </div>
 
@@ -155,7 +177,7 @@ const Presale: React.FC = () => {
             <span className={classes.poweredStrong}>
               <Image
                 src={TokenIcon}
-                alt=""
+                alt="Ikona Tokenu"
                 width={isMobile ? 24 : undefined}
                 height={isMobile ? 24 : undefined}
               />

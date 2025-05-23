@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section id="#pre-sale" className={classes.hero}>
+    <section className={classes.hero}>
       <div className={classes.tracesWrapper}>
         <Image src={DogTracesImage} alt="" />
       </div>

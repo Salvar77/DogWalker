@@ -14,7 +14,7 @@ import burgerIcon from "@/assets/img/burgerIcon.svg";
 
 type MenuItem = {
   href?: string;
-  key: string; // namespace key, e.g. "invest.label"
+  key: string;
   dropdown?: { href: string; key: string }[];
 };
 
