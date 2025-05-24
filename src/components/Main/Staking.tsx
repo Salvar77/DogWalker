@@ -27,6 +27,10 @@ const Staking = () => {
   }, []);
   return (
     <div className={classes.background}>
+      <div className={classes.circleWrapper}>
+        <Image src={StakingCircleLines} alt="Dekoracyjne okręgi" priority />
+      </div>
+
       <div className={classes.bgWrapper}>
         <Image
           src={StakingBackgroundImage}
@@ -49,35 +53,6 @@ const Staking = () => {
         </div>
 
         {/** Decorative paw traces */}
-        {/* <Image
-          src={StakingDogLockImage}
-          alt="Ikona psa z kłódką symbolizująca staking"
-          className={classes.dogTraces}
-          width={isMobile ? 100 : undefined}
-          height={isMobile ? 100 : undefined}
-        />
-
-        <Image
-          src={StakingCircleLines}
-          alt="Dekoracyjne okręgi symbolizujące połączenia stakingu"
-          className={classes.rectangle}
-          width={isMobile ? 75 : undefined}
-          height={isMobile ? 75 : undefined}
-        />
-
-        <Image
-          src={StakingWykresImage}
-          alt="Wykres stakingu pokazujący wzrost wartości"
-          className={classes.rectangleSecond}
-          width={isMobile ? 100 : undefined}
-          height={isMobile ? 100 : undefined}
-        />
-
-        <Image
-          src={StakingBackgroundImage}
-          alt="Tło sekcji staking z grafiką"
-          className={classes.ellipseTwo}
-        /> */}
 
         <Image
           src={StakingRectangleSmall}
@@ -178,9 +153,23 @@ const Staking = () => {
           </div>
         </div>
 
-        <div className={classes.staking__supply}>
-          <div className={classes.staking__supplyInside}>
-            <Image src={StakingWykresImage} alt="wykres" />
+        <div className={classes.staking__supplyFlex}>
+          <div className={classes.staking__supply}>
+            <div className={classes.staking__supplyLabel}>
+              {t("totalSupplyLabel")}
+            </div>
+            <div className={classes.staking__supplyInside}>
+              <Image src={StakingWykresImage} alt="wykres" />
+            </div>
+          </div>
+
+          <div className={classes.staking__dogLock}>
+            <Image
+              src={StakingDogLockImage}
+              alt="Ikona psa z kłódką symbolizująca staking"
+              width={isMobile ? 200 : undefined}
+              height={isMobile ? 200 : undefined}
+            />
           </div>
         </div>
       </section>

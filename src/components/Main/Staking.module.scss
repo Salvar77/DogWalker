@@ -3,6 +3,17 @@
 .background {
   position: relative;
   overflow: visible;
+
+  .circleWrapper {
+    position: absolute;
+    bottom: -12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 40rem;
+    pointer-events: none;
+    z-index: 20;
+  }
 }
 
 .bgWrapper {
@@ -22,9 +33,10 @@
 .staking {
   position: relative;
   height: 100%;
-  padding: 0 1rem;
+  padding: 1.2rem;
   z-index: 2;
   padding-top: 8rem;
+  padding-bottom: 6rem;
 
   .ellipse {
     position: absolute;
@@ -32,14 +44,14 @@
     left: 010rem;
     width: 25rem;
     pointer-events: none;
-    z-index: 40;
+    z-index: 20;
 
     &Two {
       position: absolute;
       width: 25rem;
       top: 1rem;
       right: 1rem;
-      z-index: 5;
+      z-index: 0;
     }
   }
 
@@ -66,7 +78,7 @@
       padding: 0.7rem 1.5rem;
       background: #ffb94a33;
       color: $main-color;
-      font-size: 1rem;
+      font-size: 1.2rem;
       border: none;
       border-radius: 1.2rem;
       cursor: pointer;
@@ -96,11 +108,74 @@
     top: 1rem;
     left: 8rem;
     z-index: 10;
+    backdrop-filter: blur(2px);
+    z-index: 100;
   }
   .rectangleSecond {
     top: 1rem;
     left: 0;
     z-index: 20;
+    // background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
+    border-radius: 50%;
+  }
+
+  &__supplyFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+
+  &__supply {
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 1rem;
+    background: rgba(rgba($grey-smooth, 0.9), 0.1);
+    border-radius: 1.5rem;
+    text-align: left;
+    display: inline-block;
+
+    /* etykieta “Total Supply” */
+    &Label {
+      padding: 0.5rem;
+      font-weight: 600;
+      color: rgba($white-smooth, 0.9);
+      margin-bottom: 1rem;
+    }
+
+    /* kontener na wykres */
+    &Inside {
+      padding: 0.5rem;
+      // background: $white-smooth-2;
+      border-radius: 1rem;
+      display: inline-block;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__dogLock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 992px) {
+      margin-top: 2.9rem;
+      margin-left: 2rem;
+    }
   }
 
   &__box {
@@ -159,6 +234,7 @@
 
         img {
           height: auto;
+          z-index: 100;
         }
       }
 
@@ -193,6 +269,10 @@
           &:hover {
             background: darken(#81d84b, 45%);
           }
+
+          img {
+            margin-left: 0.5rem;
+          }
         }
       }
     }
@@ -200,7 +280,23 @@
 }
 
 @media (min-width: 992px) {
+  .background {
+    .circleWrapper {
+      position: absolute;
+      bottom: -8%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: 41rem;
+      pointer-events: none;
+      z-index: 20;
+    }
+  }
   .staking {
+    .header {
+      justify-content: flex-start;
+      gap: 2rem;
+    }
     &__box {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

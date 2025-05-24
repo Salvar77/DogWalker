@@ -92,13 +92,14 @@
   .rectangleSecond {
     position: absolute;
     right: 0;
-    z-index: 3;
   }
   .rectangle {
     bottom: 0;
+    backdrop-filter: blur(3px);
   }
   .rectangleSecond {
     bottom: 5rem;
+    z-index: -1;
   }
 
   &__box {

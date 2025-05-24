@@ -1,5 +1,6 @@
 import Hero from "@/components/Main/Hero";
 import Presale from "@/components/Main/Presale";
+import ReferAFriend from "@/components/Main/ReferAFriend";
 import Staking from "@/components/Main/Staking";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
@@ -13,6 +14,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
         "hero",
         "presale",
         "staking",
+        "refer",
       ])),
     },
   };
@@ -26,6 +28,7 @@ export default function Home() {
       </div>
       <Presale />
       <Staking />
+      <ReferAFriend />
     </div>
   );
 }
