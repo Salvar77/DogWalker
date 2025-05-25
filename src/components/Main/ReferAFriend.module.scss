@@ -11,7 +11,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
-  height: 100%;
+  min-height: 100%;
   z-index: 1;
 
   .bg {
@@ -33,8 +33,7 @@
 
     @media (min-width: 992px) {
       flex-direction: row;
-      justify-content: center;
-      gap: 15rem;
+      justify-content: space-between;
     }
   }
 
@@ -62,30 +61,51 @@
   }
 
   .heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 0;
-    font-family: "Bogart", serif;
+    font-family: "Bogart Trial", serif;
     font-weight: bold;
+    text-shadow: 0.1rem 0.1rem 0.1rem $dark-gray;
+    @media (min-width: 992px) {
+      text-align: left;
+      font-size: 3rem;
+    }
   }
   .subheading {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     margin: 0.5rem 0 1rem;
-  }
-  .image {
-    max-width: 200px;
-    width: 100%;
-    height: auto;
+    text-align: center;
+    text-shadow: 0.05rem 0.05rem 0.1rem $dark-gray;
 
     @media (min-width: 992px) {
-      transform: translateY(-35%);
+      text-align: left;
+      font-size: 1.5rem;
+    }
+  }
+
+  .dogWrapper {
+    height: 17rem;
+    position: static;
+
+    @media (min-width: 992px) {
+      position: absolute;
+      bottom: 0;
+      left: 25%;
+      z-index: 2;
+    }
+    .image {
+      max-width: 200px;
+      width: 100%;
+      height: 100%;
     }
   }
 
   &__boxTwo {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
 
     @media (min-width: 992px) {
       flex-direction: row;
@@ -123,6 +143,7 @@
     padding: 0.75rem 1.5rem;
     cursor: pointer;
     transition: color 0.2s;
+    margin-top: 1rem;
 
     &:hover {
       color: darken($main-color, 15%);
@@ -130,6 +151,36 @@
 
     &:focus-visible {
       box-shadow: 0 0 0 3px rgba($main-color, 0.5);
+    }
+
+    @media (min-width: 992px) {
+      margin-top: 0;
+    }
+  }
+
+  .rectangle,
+  .rectangleTwo {
+    position: absolute;
+    right: 0;
+    @media (min-width: 992px) {
+      right: calc((1200px - 100vw) / 2);
+    }
+  }
+
+  .rectangle {
+    top: -7rem;
+    backdrop-filter: blur(1px);
+    border-radius: 15%;
+    @media (min-width: 992px) {
+      top: -7rem;
+    }
+  }
+
+  .rectangleTwo {
+    top: -4rem;
+    right: 8rem;
+    @media (min-width: 992px) {
+      right: -30rem;
     }
   }
 }

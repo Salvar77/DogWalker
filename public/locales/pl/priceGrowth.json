@@ -1,0 +1,19 @@
+{
+  "label": "Model wzrostu ceny tokena",
+  "subtitle": "10 rund ICO + 20% w każdej rundzie",
+  "verticalLabel": "Model wzrostu ceny",
+  "headers": {
+    "round": "Runda",
+    "price": "Cena DWT (USD)",
+    "increase": "Wzrost w stos. do poprzedniej",
+    "allocation": "Procent alokacji",
+    "capital": "Zebrany kapitał (pełna alokacja)"
+  },
+  "row": {
+    "round": "Runda {{round}}"
+  },
+  "footer": {
+    "capitalTotal": "~9.66 mln USD\n(9 mln EUR)",
+    "capitalTotalEur": "(9 mln EUR) "
+  }
+}

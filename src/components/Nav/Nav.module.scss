@@ -136,7 +136,7 @@
 
 .langWrapper {
   position: relative;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 .langDropdown {
@@ -149,6 +149,7 @@
   padding: 0.5rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 0.4rem;
+  z-index: 2000;
   li {
     padding: 0.5rem 1rem;
     cursor: pointer;
@@ -325,13 +326,16 @@
 }
 
 @media (max-width: 991px) {
+  .actions {
+    z-index: 100000;
+  }
   .header {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
     position: relative;
-    z-index: 1400;
+    z-index: 1500;
   }
 
   .header .logo {
@@ -386,7 +390,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .nav {
     display: none;
   }

@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import classes from "./ReferAFriend.module.scss";
 import ReferAFriendDogImage from "@/assets/img/ReferAFriendDogImage.svg";
@@ -9,6 +10,16 @@ import ReferAFriendBackground from "@/assets/img/ReferAFriendBackground.svg";
 
 const ReferAFriend = () => {
   const { t } = useTranslation("refer");
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 992);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <div className={classes.background}>
       <div className={classes.bgWrapper}>
@@ -28,11 +39,14 @@ const ReferAFriend = () => {
               <h2 className={classes.heading}>{t("heading")}</h2>
               <p className={classes.subheading}>{t("subheading")}</p>
             </div>
-            <Image
-              src={ReferAFriendDogImage}
-              alt=""
-              className={classes.image}
-            />
+            <div className={classes.dogWrapper}>
+              <Image
+                src={ReferAFriendDogImage}
+                alt=""
+                className={classes.image}
+                priority
+              />
+            </div>
           </div>
 
           {/* Box Two: input + przyciski */}
@@ -49,6 +63,23 @@ const ReferAFriend = () => {
             <button className={classes.generateBtn}>{t("generateCTA")}</button>
           </div>
         </div>
+
+        <Image
+          src={ReferAFriendRectangle1}
+          alt=""
+          className={classes.rectangle}
+          priority
+          width={isMobile ? 100 : undefined}
+          height={isMobile ? 100 : undefined}
+        />
+        <Image
+          src={ReferAFriendRectangle2}
+          alt=""
+          className={classes.rectangleTwo}
+          priority
+          width={isMobile ? 70 : undefined}
+          height={isMobile ? 70 : undefined}
+        />
       </section>
     </div>
   );

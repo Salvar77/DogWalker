@@ -1,0 +1,19 @@
+{
+  "label": "Token price growth model",
+  "subtitle": "10 ICO rounds + 20% in each round",
+  "verticalLabel": "Token price growth",
+  "headers": {
+    "round": "Round",
+    "price": "DWT Price (USD)",
+    "increase": "Increase from previous",
+    "allocation": "Allocation percentage",
+    "capital": "Raised capital (at full allocation)"
+  },
+  "row": {
+    "round": "Round {{round}}"
+  },
+  "footer": {
+    "capitalTotal": "~9.66 mln USD\n(9 mln EUR)",
+    "capitalTotalEur": "(9 mln EUR)"
+  }
+}

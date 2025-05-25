@@ -1,0 +1,133 @@
+@import "../../styles/_colors.scss";
+
+.background {
+  position: relative;
+  overflow: visible;
+  background: $main-color;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+}
+
+.bgWrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  z-index: 1;
+
+  .bg {
+    object-fit: cover;
+  }
+}
+
+.growthSection {
+  position: relative;
+  z-index: 5;
+
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-500px);
+    /* jeśli chcesz, żeby nie zniknął przy overflow w pionie: */
+    padding-top: 50px;
+    gap: 1rem;
+  }
+}
+
+.label {
+  color: $main-color;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.verticalLabel {
+  position: absolute;
+  top: 80%;
+  left: 16rem;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  transform-origin: left center;
+  font-size: 4rem;
+  font-weight: 600;
+  color: $white-smooth;
+  background: linear-gradient(180deg, #ffb53d 0%, #000000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  // padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+
+  @media (max-width: 767px) {
+    position: static;
+    transform: none;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: transparent;
+    color: $dark-smooth;
+    -webkit-text-fill-color: initial;
+  }
+}
+
+.subtitle {
+  font-size: 1.9rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.tableWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.75rem;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  // padding: 2rem;
+  border-radius: 2rem;
+
+  th,
+  td {
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: left;
+  }
+
+  th {
+    background: $main-color;
+    color: $white-smooth;
+    font-weight: normal;
+
+    &:first-child {
+      border-bottom-left-radius: 2rem;
+      border-top-left-radius: 2rem;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 2rem;
+      border-top-right-radius: 2rem;
+    }
+  }
+
+  tbody tr {
+    background: #fafafa;
+  }
+
+  .totalRow td {
+    font-weight: bold;
+    padding-top: 1.5rem;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+  }
+
+  tfoot .totalRow td:last-child {
+    white-space: pre-line;
+  }
+}
