@@ -5,7 +5,11 @@
   margin-top: -60rem;
   padding-top: 60rem;
   overflow: visible;
-  margin-bottom: 45rem;
+  margin-bottom: 40rem;
+
+  @media (min-width: 992px) {
+    margin-bottom: 40rem;
+  }
 }
 
 .bgWrapper {
@@ -14,7 +18,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
-  height: calc(100% + 46rem);
+  height: calc(100% + 40rem);
   z-index: 1;
 
   .bg {

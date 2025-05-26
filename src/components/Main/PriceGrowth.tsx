@@ -1,10 +1,9 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import classes from "./PriceGrowth.module.scss";
-import TokenPriceGrowthTable from "@/assets/img/TokenPriceGrowthTable.svg";
 import PriceGrowthBackground from "@/assets/img/PriceGrowthBackground.png";
-import PriceGrowthTableLines from "@/assets/img/PriceGrowthTableLines.png";
 import PriceGrowthRocketIcon from "@/assets/img/PriceGrowthRocketIcon.svg";
 import PriceGrowthDogIcon from "@/assets/img/PriceGrowthDogIcon.svg";
 import PriceGrowthDogTracesImage from "@/assets/img/PriceGrowthDogTracesImage.svg";
@@ -89,6 +88,15 @@ const data = [
 const PriceGrowth = () => {
   const { t } = useTranslation("priceGrowth");
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 992);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const totalAllocation = data.reduce(
     (sum, row) => sum + parseInt(row.allocation),
     0
@@ -98,7 +106,7 @@ const PriceGrowth = () => {
       <div className={classes.bgWrapper}>
         <Image
           src={PriceGrowthBackground}
-          alt=""
+          alt={t("alts.background")}
           fill
           className={classes.bg}
           priority
@@ -106,8 +114,6 @@ const PriceGrowth = () => {
       </div>
 
       <section id="token-price-growth" className={classes.growthSection}>
-        {/* vertical label */}
-
         <div className={classes.content}>
           <div className={classes.verticalLabel}>{t("verticalLabel")}</div>
           <div className={classes.headerText}>
@@ -131,7 +137,7 @@ const PriceGrowth = () => {
                     <td>{t("row.round", { round: row.round })}</td>
                     <td>{row.price}</td>
                     <td>{row.increase}</td>
-                    <td>{row.allocation}%</td>
+                    <td>{row.allocation}</td>
                     <td>{row.capital}</td>
                   </tr>
                 ))}
@@ -139,7 +145,8 @@ const PriceGrowth = () => {
               <tfoot>
                 <tr className={classes.totalRow}>
                   <td>{t("footer.allocationLabel")}</td>
-                  <td colSpan={2}></td>
+                  <td>-</td>
+                  <td>-</td>
                   <td>{totalAllocation}%</td>
                   <td>{t("footer.capitalTotal")}</td>
                 </tr>
@@ -147,6 +154,56 @@ const PriceGrowth = () => {
             </table>
           </div>
         </div>
+
+        <Image
+          src={PriceGrowthRectangle1}
+          alt={t("alts.rectangle1")}
+          className={classes.rect1}
+          width={isMobile ? 150 : undefined}
+          height={isMobile ? 150 : undefined}
+        />
+        <Image
+          src={PriceGrowthRectangle2}
+          alt={t("alts.rectangle2")}
+          className={classes.rect2}
+          width={isMobile ? 75 : undefined}
+          height={isMobile ? 75 : undefined}
+        />
+        <Image
+          src={PriceGrowthRectangle3}
+          alt={t("alts.rectangle3")}
+          className={classes.rect3}
+          width={isMobile ? 150 : undefined}
+          height={isMobile ? 150 : undefined}
+        />
+        <Image
+          src={PriceGrowthRectangle4}
+          alt={t("alts.rectangle4")}
+          className={classes.rect4}
+          width={isMobile ? 75 : undefined}
+          height={isMobile ? 75 : undefined}
+        />
+        <Image
+          src={PriceGrowthDogIcon}
+          alt={t("alts.dogIcon")}
+          className={classes.dogIcon}
+          width={isMobile ? 100 : undefined}
+          height={isMobile ? 100 : undefined}
+        />
+        <Image
+          src={PriceGrowthRocketIcon}
+          alt={t("alts.rocketIcon")}
+          className={classes.rocketIcon}
+          width={isMobile ? 50 : undefined}
+          height={isMobile ? 50 : undefined}
+        />
+        <Image
+          src={PriceGrowthDogTracesImage}
+          alt={t("alts.dogTraces")}
+          className={classes.dogTraces}
+          width={isMobile ? 100 : undefined}
+          height={isMobile ? 100 : undefined}
+        />
       </section>
     </div>
   );

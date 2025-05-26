@@ -113,7 +113,7 @@
 }
 
 .images {
-  width: 100%;
+  width: min(375px, 100%);
   aspect-ratio: 375 / 412;
   position: relative;
   // overflow: hidden;
@@ -189,15 +189,19 @@
 
   @media (max-width: 376px) {
     top: 15%;
-    right: 19%;
+    right: 20%;
   }
 }
 
 .phoneTop {
   position: absolute;
   top: 0;
-  left: 12%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 6;
+  /* jeśli chcesz, żeby obrazek wypełniał cały wrapper: */
+  width: 100%;
+  height: 100%;
 }
 
 .rocket {
@@ -253,7 +257,13 @@
   pointer-events: none;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) and (max-width: 991px) {
+  .images {
+    width: min(350px, 100%);
+  }
+}
+
+@media (min-width: 992px) {
   .hero {
     flex-direction: row;
     justify-content: space-between;
@@ -347,7 +357,11 @@
     top: -6rem;
     left: 2.4rem;
     z-index: 6;
-    width: 100rem;
+
+    transform: none;
+
+    width: 70rem;
+    height: auto;
   }
 
   .rocket {
