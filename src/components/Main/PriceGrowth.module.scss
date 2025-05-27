@@ -25,7 +25,7 @@
 .growthSection {
   position: relative;
   z-index: 5;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -37,13 +37,13 @@
   gap: 2rem;
   margin-top: -400px;
   @media (min-width: 992px) {
-    margin-top: -400px;
+    margin-top: -470px;
   }
 }
 
 .headerText {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: -1rem;
 
   .label {
     color: $main-color;
@@ -74,8 +74,6 @@
 
 .table {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 1rem;
   border-collapse: separate;
   border-spacing: 0;
@@ -94,9 +92,6 @@
     font-size: 1rem;
     text-align: left;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-    &:last-child {
-    }
   }
 
   thead th {
@@ -139,12 +134,12 @@
 
 .verticalLabel {
   position: absolute;
-  top: 93%;
-  left: 14%;
+  top: 90%;
+  left: 18.5%;
   transform: translate(-50%, -50%) rotate(-90deg);
   transform-origin: left center;
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 800;
   color: $white-smooth;
   background: linear-gradient(180deg, #ffb53d 0%, #000000 100%);
   -webkit-background-clip: text;
@@ -223,9 +218,20 @@
   .background {
     padding-bottom: 4rem;
   }
+
   .table {
-    padding: 3rem 2rem;
+    padding: 2rem 1.5rem;
+
+    thead th {
+      padding: 3rem 2rem;
+      white-space: pre-line;
+    }
+
+    tbody tr:first-child td {
+      border-top: 1rem solid transparent; // zrobi przerwę 1rem
+    }
   }
+
   .rect1 {
     top: 45%;
     left: -18%;
@@ -259,7 +265,7 @@
   }
   .dogTraces {
     left: auto;
-    bottom: -3%;
+    bottom: -4%;
     right: -12%;
     z-index: 1;
   }

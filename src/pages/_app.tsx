@@ -20,7 +20,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>DogWalker</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      {/* tutaj nakładasz czcionki i antialiased na cały wrapper */}
       <div
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

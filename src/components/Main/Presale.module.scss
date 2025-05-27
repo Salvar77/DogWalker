@@ -40,6 +40,8 @@
       bottom: 8rem;
       right: 1rem;
       z-index: 5;
+      backdrop-filter: blur(3px);
+      border-radius: 50%;
     }
   }
   .header {
@@ -95,11 +97,9 @@
   }
   .rectangle {
     bottom: 0;
-    backdrop-filter: blur(3px);
   }
   .rectangleSecond {
     bottom: 5rem;
-    z-index: -1;
   }
 
   &__box {
@@ -319,7 +319,6 @@
   .presale {
     .presale__box {
       flex-direction: row;
-      // max-width: 800px;
       gap: 2rem;
     }
 
@@ -364,6 +363,7 @@
         z-index: 1;
       }
     }
+
     .header {
       display: flex;
       justify-content: flex-start;
@@ -445,6 +445,7 @@
         font-size: 1.2rem;
       }
     }
+
     &__boxFive {
       grid-column: 2;
       grid-row: 2;

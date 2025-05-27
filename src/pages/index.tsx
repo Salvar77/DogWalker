@@ -2,6 +2,7 @@ import Hero from "@/components/Main/Hero";
 import Presale from "@/components/Main/Presale";
 import PriceGrowth from "@/components/Main/PriceGrowth";
 import ReferAFriend from "@/components/Main/ReferAFriend";
+import Roadmap from "@/components/Main/Roadmap";
 import Staking from "@/components/Main/Staking";
 import Tokenomics from "@/components/Main/Tokenomics";
 import TokenomicsEcosystem from "@/components/Main/TokenomicsEcosystem";
@@ -21,6 +22,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
         "tokenomics",
         "tokenomicsEcosystem",
         "priceGrowth",
+        "roadmap",
       ])),
     },
   };
@@ -38,6 +40,7 @@ export default function Home() {
       <Tokenomics />
       <TokenomicsEcosystem />
       <PriceGrowth />
+      <Roadmap />
     </div>
   );
 }

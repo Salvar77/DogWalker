@@ -1,0 +1,174 @@
+@import "../../styles/_colors.scss";
+
+.background {
+  position: relative;
+  overflow: visible;
+}
+
+.bgWrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+
+  .bg {
+    object-fit: cover;
+  }
+}
+
+.roadmap {
+  position: relative;
+  z-index: 2;
+  padding: 16px;
+  background-color: transparent;
+
+  // — Header (title + Learn More)
+  .header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $white-100;
+    }
+
+    .learnMore {
+      margin-top: 8px;
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.875rem;
+      font-weight: 600;
+      background: transparent;
+      border: none;
+      color: $main-color;
+      cursor: pointer;
+      padding: 0;
+
+      .arrow {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  // — Subtitle & intro
+  .subtitle {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: $secondary-color;
+    margin-bottom: 4px;
+  }
+
+  .heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $white-100;
+    margin-bottom: 8px;
+  }
+
+  .description {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: $secondary-color;
+    margin-bottom: 16px;
+  }
+
+  // — Cards grid
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 16px;
+
+    .card {
+      background: $tertiary-color;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: $card-shadow;
+
+      .cardTitle {
+        font-size: 1rem;
+        font-weight: 600;
+        color: $white-100;
+        margin-bottom: 8px;
+      }
+
+      .list {
+        list-style: none;
+        margin: 0 0 12px 0;
+        padding: 0;
+
+        li {
+          position: relative;
+          padding-left: 20px;
+          margin-bottom: 8px;
+          font-size: 0.8125rem;
+          color: $white-100;
+
+          &::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: $main-color;
+          }
+        }
+      }
+
+      .goal {
+        display: flex;
+        align-items: center;
+        background: $main-color-2;
+        border-radius: 6px;
+        padding: 8px;
+        font-size: 0.8125rem;
+
+        .goalLabel {
+          font-weight: 600;
+          color: $main-color-3;
+          margin-right: 4px;
+        }
+
+        .goalText {
+          color: $white-100;
+        }
+      }
+    }
+  }
+}
+
+// — Tablet & up
+@media (min-width: 768px) {
+  .roadmap {
+    padding: 24px;
+
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 24px;
+      grid-row-gap: 24px;
+    }
+  }
+}
+
+// — Desktop & up
+@media (min-width: 1200px) {
+  .roadmap {
+    padding: 32px;
+
+    .cards {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 32px;
+      grid-row-gap: 32px;
+    }
+  }
+}

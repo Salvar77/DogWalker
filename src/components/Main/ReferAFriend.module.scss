@@ -169,8 +169,9 @@
 
   .rectangle {
     top: -7rem;
-    backdrop-filter: blur(1px);
-    border-radius: 15%;
+    backdrop-filter: blur(5px);
+    border-top-left-radius: 11rem;
+    border-bottom-left-radius: 11rem;
     @media (min-width: 992px) {
       top: -7rem;
     }
@@ -179,6 +180,8 @@
   .rectangleTwo {
     top: -4rem;
     right: 8rem;
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
     @media (min-width: 992px) {
       right: -30rem;
     }

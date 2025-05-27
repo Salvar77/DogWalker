@@ -81,6 +81,10 @@ export default function Nav({ isOpen, toggleNav }: NavProps) {
           href: "#tokenomics-ecosystem",
           key: "about.items.tokenomicsEcosystem",
         },
+        {
+          href: "#roadmap",
+          key: "about.items.roadmap",
+        },
         { href: "#features", key: "about.items.features" },
       ],
     },
