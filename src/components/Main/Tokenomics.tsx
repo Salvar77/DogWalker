@@ -10,7 +10,6 @@ import TokenomicsBackgroundInside1 from "@/assets/img/TokenomicsBackgroundInside
 import TokenomicsBackgroundInside2 from "@/assets/img/TokenomicsBackgroundInside2.svg";
 import TokenomicsBackgroundInside3 from "@/assets/img/TokenomicsBackgroundInside3.svg";
 import TokenomicsBackgroundInside4 from "@/assets/img/TokenomicsBackgroundInside4.svg";
-import DogWalkerLogo from "@/assets/img/DogWalkerLogo.svg";
 
 const Tokenomics: React.FC = () => {
   const { t } = useTranslation("tokenomics");

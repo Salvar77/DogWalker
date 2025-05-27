@@ -3,172 +3,225 @@
 .background {
   position: relative;
   overflow: visible;
+  padding-top: 3rem;
+  @media (min-width: 992px) {
+    padding-top: 3rem;
+  }
 }
 
 .bgWrapper {
   position: absolute;
+  background: $primary-color;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
-  height: 100%;
+  height: 110%;
+  z-index: 1;
 
   .bg {
     object-fit: cover;
+    background-color: dark-smooth;
   }
 }
 
 .roadmap {
   position: relative;
   z-index: 2;
-  padding: 16px;
-  background-color: transparent;
 
-  // — Header (title + Learn More)
+  padding: 0 1rem;
+  color: $white-100;
+
   .header {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
 
     .title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: $white-100;
+      font-family: "Bogart Trial", serif;
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: $white-smooth;
     }
-
     .learnMore {
-      margin-top: 8px;
       display: inline-flex;
       align-items: center;
-      font-size: 0.875rem;
-      font-weight: 600;
-      background: transparent;
-      border: none;
+      gap: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      background: #ffb94a33;
       color: $main-color;
+      font-size: 1rem;
+      border: none;
+      border-radius: 1.2rem;
       cursor: pointer;
-      padding: 0;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background: #ffe6cc;
+      }
 
       .arrow {
-        margin-left: 4px;
+        display: inline-block;
+        font-size: 1rem;
+        transform: translateY(-1px);
       }
     }
   }
 
-  // — Subtitle & intro
+  .text {
+    padding: 0.5rem;
+  }
+
   .subtitle {
-    display: block;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    color: $secondary-color;
-    margin-bottom: 4px;
-  }
-
-  .heading {
     font-size: 1.25rem;
-    font-weight: 600;
-    color: $white-100;
-    margin-bottom: 8px;
+    text-transform: uppercase;
+    color: $main-color;
+    margin-bottom: 0.5rem;
   }
-
+  .heading {
+    font-family: "Bogart Trial", serif;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
   .description {
-    font-size: 0.875rem;
+    font-size: 1.4rem;
     line-height: 1.4;
     color: $secondary-color;
-    margin-bottom: 16px;
+    margin-bottom: 2rem;
   }
 
-  // — Cards grid
   .cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 16px;
+    // mobile: prosta kolumna z gapem między .card
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem; // jeśli chcesz odstęp przed progressem (mobile nie ma paska)
 
-    .card {
-      background: $tertiary-color;
-      border-radius: 12px;
-      padding: 16px;
-      box-shadow: $card-shadow;
+    @media (min-width: 992px) {
+      // desktop: slider w rzędzie
+      display: block; // pozwalamy slickowi przejąć kontrolę
+      margin-bottom: 0; // usuwamy niepotrzebny gap
+    }
 
-      .cardTitle {
-        font-size: 1rem;
-        font-weight: 600;
-        color: $white-100;
-        margin-bottom: 8px;
-      }
+    // nadal możesz trzymać resztę slick‐owych reguł:
+    .slick-list {
+      overflow: hidden; // ukryj native scrollbar
+    }
+    .slick-track {
+      display: flex;
+      gap: 1rem;
+    }
+    .slick-slide > div {
+      display: flex;
+      justify-content: center;
+    }
+  }
 
-      .list {
-        list-style: none;
-        margin: 0 0 12px 0;
-        padding: 0;
+  .card {
+    background: $tertiary-color;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: $card-shadow;
+    color: $white-100;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-        li {
-          position: relative;
-          padding-left: 20px;
-          margin-bottom: 8px;
-          font-size: 0.8125rem;
-          color: $white-100;
-
-          &::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: $main-color;
-          }
-        }
-      }
-
-      .goal {
-        display: flex;
-        align-items: center;
-        background: $main-color-2;
-        border-radius: 6px;
-        padding: 8px;
+    .cardTitle {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .list {
+      list-style: none;
+      margin: 0 0 1rem;
+      padding: 0;
+      li {
+        position: relative;
+        padding-left: 1.25rem;
+        margin-bottom: 0.5rem;
         font-size: 0.8125rem;
-
-        .goalLabel {
-          font-weight: 600;
-          color: $main-color-3;
-          margin-right: 4px;
-        }
-
-        .goalText {
-          color: $white-100;
+        &::before {
+          content: "•";
+          position: absolute;
+          left: 0;
+          color: $main-color;
         }
       }
+    }
+    .goal {
+      background: darken(#81d84b, 45%);
+
+      border-radius: 6px;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      font-size: 0.8125rem;
+      transition: background 0.2s;
+      &:hover {
+        background: darken(#81d84b, 25%);
+      }
+      .goalLabel {
+        font-weight: 600;
+        color: $main-color-3;
+        margin-right: 0.25rem;
+      }
+      .goalText {
+        color: #81d84b;
+      }
+    }
+  }
+
+  // custom progress bar
+  .progressBar {
+    margin-top: 1.5rem;
+    .progressTrack {
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .progressFill {
+      height: 100%;
+      background: $main-color;
+      transition: width 0.3s ease;
     }
   }
 }
 
-// — Tablet & up
+// tablet+
 @media (min-width: 768px) {
   .roadmap {
-    padding: 24px;
-
-    .header {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 4rem;
-    }
-
-    .cards {
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 24px;
-      grid-row-gap: 24px;
-    }
+    padding: 0 1.5rem;
+  }
+  .cards .slick-slide > div {
+    max-width: 320px;
   }
 }
 
-// — Desktop & up
-@media (min-width: 1200px) {
+// desktop+
+@media (min-width: 992px) {
   .roadmap {
-    padding: 32px;
+    padding: 0 2rem;
 
-    .cards {
-      grid-template-columns: repeat(4, 1fr);
-      grid-column-gap: 32px;
-      grid-row-gap: 32px;
+    .header {
+      justify-content: flex-start;
+      gap: 2rem;
     }
+  }
+  .cards .slick-slide > div {
+    max-width: 240px;
+  }
+}
+
+// wide+
+@media (min-width: 1440px) {
+  .cards .slick-slide > div {
+    max-width: 280px;
   }
 }
