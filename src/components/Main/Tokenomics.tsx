@@ -1,10 +1,8 @@
 "use client";
-
 import React from "react";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import classes from "./Tokenomics.module.scss";
-
 import TokenomicsBackground from "@/assets/img/TokenomicsBackground.png";
 import TokenomicsBackgroundInside1 from "@/assets/img/TokenomicsBackgroundInside1.svg";
 import TokenomicsBackgroundInside2 from "@/assets/img/TokenomicsBackgroundInside2.svg";

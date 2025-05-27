@@ -1,3 +1,4 @@
+import Features from "@/components/Main/Features";
 import Hero from "@/components/Main/Hero";
 import Presale from "@/components/Main/Presale";
 import PriceGrowth from "@/components/Main/PriceGrowth";
@@ -23,6 +24,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
         "tokenomicsEcosystem",
         "priceGrowth",
         "roadmap",
+        "features",
       ])),
     },
   };
@@ -41,6 +43,7 @@ export default function Home() {
       <TokenomicsEcosystem />
       <PriceGrowth />
       <Roadmap />
+      <Features />
     </div>
   );
 }

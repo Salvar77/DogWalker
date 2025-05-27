@@ -17,6 +17,11 @@ html {
   background-color: $white-smooth;
 }
 
+:root {
+  --emoji-fonts: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji",
+    sans-serif;
+}
+
 body {
   position: relative;
   font-size: 1.6rem;

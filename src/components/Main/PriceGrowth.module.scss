@@ -216,7 +216,7 @@
 
 @media (min-width: 992px) {
   .background {
-    padding-bottom: 6rem;
+    padding-bottom: 8rem;
   }
 
   .table {
@@ -225,6 +225,7 @@
     thead th {
       padding: 3rem 2rem;
       white-space: pre-line;
+      font-size: 1.2rem;
     }
 
     tbody tr:first-child td {

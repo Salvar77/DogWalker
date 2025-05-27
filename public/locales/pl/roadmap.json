@@ -4,7 +4,7 @@
   "subtitle": "Oś czasu i kamienie milowe",
   "heading": "Kluczowe kamienie milowe wdrożenia projektu",
   "description": "Projekt DogWalkerToken jest realizowany etapami, zgodnie z podejściem: planowanie – budowa – testowanie – ekspansja. Każdy krok ma jasno określony cel: zwiększenie użyteczności, zaangażowania społeczności i wartości tokena",
-  "goalLabel": "✅",
+  "goalLabel": "Goal:",
   "phases": [
     {
       "label": "Faza 1: Planowanie i badanie rynku (Q1 2025)",
@@ -38,6 +38,36 @@
     },
     {
       "label": "Etap 4: Publiczne ICO i przedsprzedaż (Q2 2025)",
+      "items": [
+        "Rozpoczęcie pierwszej rundy ICO po cenie 0,01 USD za DWT",
+        "Uruchomienie kampanii marketingowej (media społecznościowe, influencerzy, artykuły)",
+        "System poleceń (5%) i whitelisty",
+        "Airdropy i wczesny staking z APR 20% dla pierwszych użytkowników"
+      ],
+      "goal": "Stworzenie solidnych podstaw pod koncept i tokenizację"
+    },
+    {
+      "label": "Etap 5: Publiczne ICO i przedsprzedaż (Q2 2025)",
+      "items": [
+        "Rozpoczęcie pierwszej rundy ICO po cenie 0,01 USD za DWT",
+        "Uruchomienie kampanii marketingowej (media społecznościowe, influencerzy, artykuły)",
+        "System poleceń (5%) i whitelisty",
+        "Airdropy i wczesny staking z APR 20% dla pierwszych użytkowników"
+      ],
+      "goal": "Stworzenie solidnych podstaw pod koncept i tokenizację"
+    },
+    {
+      "label": "Etap 6: Publiczne ICO i przedsprzedaż (Q2 2025)",
+      "items": [
+        "Rozpoczęcie pierwszej rundy ICO po cenie 0,01 USD za DWT",
+        "Uruchomienie kampanii marketingowej (media społecznościowe, influencerzy, artykuły)",
+        "System poleceń (5%) i whitelisty",
+        "Airdropy i wczesny staking z APR 20% dla pierwszych użytkowników"
+      ],
+      "goal": "Stworzenie solidnych podstaw pod koncept i tokenizację"
+    },
+    {
+      "label": "Etap 7: Publiczne ICO i przedsprzedaż (Q2 2025)",
       "items": [
         "Rozpoczęcie pierwszej rundy ICO po cenie 0,01 USD za DWT",
         "Uruchomienie kampanii marketingowej (media społecznościowe, influencerzy, artykuły)",

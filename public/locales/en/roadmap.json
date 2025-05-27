@@ -4,7 +4,7 @@
   "subtitle": "Timeline and Milestones",
   "heading": "Key milestones of the project implementation",
   "description": "The DogWalkerToken project is implemented in stages, according to the approach: planning – building – testing – expansion. Each step has a clearly defined goal: to increase usability, community engagement and token value",
-  "goalLabel": "✅",
+  "goalLabel": "Goal:",
   "phases": [
     {
       "label": "Phase 1: Planning and Market Research (Q1 2025)",
@@ -38,6 +38,36 @@
     },
     {
       "label": "Stage 4: Public ICO and presale (Q2 2025)",
+      "items": [
+        "Start of the first round of ICO at a price of $0.01 per DWT",
+        "Launch of a marketing campaign (social media, influencers, articles)",
+        "Referral system (5%) and whitelists",
+        "Airdrops and early staking with APR 20% for first users"
+      ],
+      "goal": "Create solid foundations for concept and tokenization"
+    },
+    {
+      "label": "Stage 5: Public ICO and presale (Q2 2025)",
+      "items": [
+        "Start of the first round of ICO at a price of $0.01 per DWT",
+        "Launch of a marketing campaign (social media, influencers, articles)",
+        "Referral system (5%) and whitelists",
+        "Airdrops and early staking with APR 20% for first users"
+      ],
+      "goal": "Create solid foundations for concept and tokenization"
+    },
+    {
+      "label": "Stage 6: Public ICO and presale (Q2 2025)",
+      "items": [
+        "Start of the first round of ICO at a price of $0.01 per DWT",
+        "Launch of a marketing campaign (social media, influencers, articles)",
+        "Referral system (5%) and whitelists",
+        "Airdrops and early staking with APR 20% for first users"
+      ],
+      "goal": "Create solid foundations for concept and tokenization"
+    },
+    {
+      "label": "Stage 7: Public ICO and presale (Q2 2025)",
       "items": [
         "Start of the first round of ICO at a price of $0.01 per DWT",
         "Launch of a marketing campaign (social media, influencers, articles)",

@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
@@ -7,56 +6,55 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import classes from "./Roadmap.module.scss";
-
 import RoadmapBackground from "@/assets/img/RoadmapBackground.svg";
+import RoadmapEllipse1 from "@/assets/img/RoadmapEllipse1.svg";
 import LearnMoreArrow from "@/assets/img/PresaleArrow.svg";
 
-type Phase = {
-  label: string;
-  items: string[];
-  goal: string;
-};
+type Phase = { label: string; items: string[]; goal: string };
 
 const Roadmap: React.FC = () => {
   const { t } = useTranslation("roadmap");
   const phases = t("phases", { returnObjects: true }) as Phase[];
+  const [isMobile, setIsMobile] = useState(false);
 
-  // czy jesteśmy na desktopie (slider tylko tam)
   const [isDesktop, setIsDesktop] = useState(false);
+
   useEffect(() => {
-    const onResize = () => setIsDesktop(window.innerWidth >= 992);
-    onResize();
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
+    const upd = () => setIsDesktop(window.innerWidth >= 992);
+    upd();
+    window.addEventListener("resize", upd);
+    return () => window.removeEventListener("resize", upd);
   }, []);
 
-  // slider tylko dla desktopu
-  const sliderRef = useRef<Slider>(null);
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 992);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const [current, setCurrent] = useState(0);
-  const settings = {
+
+  // ustawienia slidera → 4 kafle na desktopie
+  const desktopSettings = {
     infinite: false,
-    slidesToShow: 4,
+    slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,
     dots: false,
-    afterChange: (idx: number) => setCurrent(idx),
-    responsive: [
-      { breakpoint: 1440, settings: { slidesToShow: 3 } },
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 992, settings: { slidesToShow: 2 } },
-    ],
+    draggable: true,
+    afterChange: (i: number) => setCurrent(i),
   };
 
-  // oblicz przesunięcie paska (desktop)
-  const progressPercent = Math.min(100, ((current + 4) / phases.length) * 100);
+  const progressPercent = Math.min(100, ((current + 2) / phases.length) * 100);
 
   return (
     <div className={classes.background}>
       <div className={classes.bgWrapper}>
         <Image src={RoadmapBackground} alt="" fill className={classes.bg} />
       </div>
-
       <section className={classes.roadmap} id="roadmap">
+        {/* --- HEADER --- */}
         <div className={classes.header}>
           <h2 className={classes.title}>{t("title")}</h2>
           <button className={classes.learnMore}>
@@ -72,23 +70,27 @@ const Roadmap: React.FC = () => {
           <p className={classes.description}>{t("description")}</p>
         </div>
 
+        {/* --- KARTY --- */}
         <div className={classes.cards}>
           {isDesktop ? (
             <>
-              <Slider ref={sliderRef} {...settings}>
-                {phases.map((phase, i) => (
-                  <div key={i} className={classes.card}>
-                    <h4 className={classes.cardTitle}>{phase.label}</h4>
-                    <ul className={classes.list}>
-                      {phase.items.map((it, j) => (
-                        <li key={j}>{it}</li>
-                      ))}
-                    </ul>
-                    <div className={classes.goal}>
-                      <span className={classes.goalLabel}>
-                        {t("goalLabel")}:
-                      </span>
-                      <span className={classes.goalText}>{phase.goal}</span>
+              <Slider {...desktopSettings}>
+                {phases.map((p, i) => (
+                  <div key={i}>
+                    <div className={classes.card}>
+                      <h4 className={classes.cardTitle}>{p.label}</h4>
+                      <ul className={classes.list}>
+                        {p.items.map((it, j) => (
+                          <li key={j}>{it}</li>
+                        ))}
+                      </ul>
+                      <div className={classes.goal}>
+                        <span className={classes.goalEmoji}>✅</span>
+                        <span className={classes.goalLabel}>
+                          {t("goalLabel")}
+                        </span>
+                        <span className={classes.goalText}>{p.goal}</span>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -103,23 +105,30 @@ const Roadmap: React.FC = () => {
               </div>
             </>
           ) : (
-            // mobile: zwykła kolumna
-            phases.map((phase, i) => (
+            phases.map((p, i) => (
               <div key={i} className={classes.card}>
-                <h4 className={classes.cardTitle}>{phase.label}</h4>
+                <h4 className={classes.cardTitle}>{p.label}</h4>
                 <ul className={classes.list}>
-                  {phase.items.map((it, j) => (
+                  {p.items.map((it, j) => (
                     <li key={j}>{it}</li>
                   ))}
                 </ul>
                 <div className={classes.goal}>
-                  <span className={classes.goalLabel}>{t("goalLabel")}:</span>
-                  <span className={classes.goalText}>{phase.goal}</span>
+                  <span className={classes.goalLabel}>{t("goalLabel")} </span>
+                  <span className={classes.goalText}>{p.goal}</span>
                 </div>
               </div>
             ))
           )}
         </div>
+
+        <Image
+          src={RoadmapEllipse1}
+          alt="Roadmap ellipse image"
+          width={400}
+          height={400}
+          className={classes.ellipse}
+        ></Image>
       </section>
     </div>
   );
