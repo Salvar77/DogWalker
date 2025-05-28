@@ -5,6 +5,8 @@ import PriceGrowth from "@/components/Main/PriceGrowth";
 import ReferAFriend from "@/components/Main/ReferAFriend";
 import Roadmap from "@/components/Main/Roadmap";
 import Staking from "@/components/Main/Staking";
+import Teams from "@/components/Main/Teams";
+import Tech from "@/components/Main/Tech";
 import Tokenomics from "@/components/Main/Tokenomics";
 import TokenomicsEcosystem from "@/components/Main/TokenomicsEcosystem";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -25,6 +27,8 @@ export async function getStaticProps({ locale }: { locale: string }) {
         "priceGrowth",
         "roadmap",
         "features",
+        "team",
+        "tech",
       ])),
     },
   };
@@ -44,6 +48,8 @@ export default function Home() {
       <PriceGrowth />
       <Roadmap />
       <Features />
+      <Teams />
+      <Tech />
     </div>
   );
 }

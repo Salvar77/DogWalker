@@ -35,10 +35,9 @@ const Roadmap: React.FC = () => {
 
   const [current, setCurrent] = useState(0);
 
-  // ustawienia slidera → 4 kafle na desktopie
   const desktopSettings = {
     infinite: false,
-    slidesToShow: 2,
+    slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
     dots: false,

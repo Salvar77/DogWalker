@@ -71,7 +71,7 @@
         font-weight: 500;
         cursor: pointer;
         transition: all 0.2s ease;
-        z-index: 100;
+        z-index: 10;
         color: $main-color;
         &.active {
           background: $main-color;
@@ -140,20 +140,6 @@
           margin-bottom: 1.5rem;
         }
       }
-
-      .storeIcons {
-        display: flex;
-        gap: 1rem;
-        // align-items: center;
-        justify-content: flex-start;
-        margin-top: 1rem;
-
-        img {
-          height: 40px;
-          width: auto;
-          object-fit: contain;
-        }
-      }
     }
   }
 
@@ -179,6 +165,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding-top: 1rem;
 
   a {
     display: inline-block;
@@ -245,8 +232,8 @@
 
     .bgWrapper {
       .bg {
-        top: 55%;
-        right: -20%;
+        top: 30%;
+        right: -35%;
         z-index: 0;
       }
     }

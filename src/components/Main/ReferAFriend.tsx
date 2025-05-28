@@ -6,7 +6,6 @@ import classes from "./ReferAFriend.module.scss";
 import ReferAFriendDogImage from "@/assets/img/ReferAFriendDogImage.svg";
 import ReferAFriendRectangle1 from "@/assets/img/ReferAFriendRectangle1.svg";
 import ReferAFriendRectangle2 from "@/assets/img/ReferAFriendRectangle2.svg";
-import ReferAFriendBackground from "@/assets/img/ReferAFriendBackground.svg";
 
 const ReferAFriend = () => {
   const { t } = useTranslation("refer");
@@ -22,15 +21,7 @@ const ReferAFriend = () => {
 
   return (
     <div className={classes.background}>
-      <div className={classes.bgWrapper}>
-        <Image
-          src={ReferAFriendBackground}
-          alt=""
-          fill
-          className={classes.bg}
-          priority
-        />
-      </div>
+      <div className={classes.bgWrapper} />
       <section className={classes.refer} id="refer-a-friend">
         <div className={classes.refer__box}>
           {/* Box One: tytuł + podtytuł + obrazek */}

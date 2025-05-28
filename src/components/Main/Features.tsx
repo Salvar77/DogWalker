@@ -38,8 +38,8 @@ const Features = () => {
           src={FeaturesBackground}
           alt=""
           className={classes.bg}
-          width={isMobile ? 500 : 300}
-          height={isMobile ? 500 : 300}
+          width={isMobile ? 500 : 1000}
+          height={isMobile ? 500 : 1000}
         />
       </div>
 
