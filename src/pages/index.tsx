@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer/Footer";
+import Contact from "@/components/Main/Contact";
 import Features from "@/components/Main/Features";
 import Hero from "@/components/Main/Hero";
 import Partners from "@/components/Main/Partners";
@@ -15,7 +17,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
-      // dodajemy 'hero' obok pozostałych
       ...(await serverSideTranslations(locale, [
         "common",
         "nav",
@@ -31,6 +32,8 @@ export async function getStaticProps({ locale }: { locale: string }) {
         "team",
         "tech",
         "partners",
+        "contact",
+        "footer",
       ])),
     },
   };
@@ -53,6 +56,8 @@ export default function Home() {
       <Teams />
       <Tech />
       <Partners />
+      <Contact />
+      <Footer />
     </div>
   );
 }

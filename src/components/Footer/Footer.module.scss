@@ -3,10 +3,11 @@
 .background {
   position: relative;
   overflow: visible;
-  padding: 3rem 1rem 4rem;
+  padding: 2rem 1rem;
+  color: $white-100;
 
   @media (min-width: 992px) {
-    padding-bottom: 10rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -17,42 +18,48 @@
   transform: translateX(-50%);
   width: 100vw;
   height: 100%;
-  z-index: 1;
   background: $dark-smooth;
+  z-index: 1;
 }
 
-.partners {
+.footer {
   position: relative;
   z-index: 2;
-  color: $white-100;
-  padding: 0 1rem;
-  text-align: center;
-
-  .heading {
-    font-size: 2rem;
-    margin-bottom: 2.5rem;
-    color: $main-color;
-    font-family: "Bogart trial", serif;
-  }
+  padding: 1rem;
 
   &__box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    padding-top: 2rem;
+    gap: 2.9rem;
 
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
       flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 3rem;
+      justify-content: space-between;
     }
   }
 
-  .logoWrapper {
+  .social {
     display: flex;
-    justify-content: center;
+    gap: 1rem;
+  }
+
+  .socialLink {
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
+  }
+
+  .reserved {
+    font-size: 1.4rem;
+    text-align: center;
+
+    .highlight {
+      color: $dark-smooth;
+    }
+
+    @media (min-width: 768px) {
+      text-align: right;
+    }
   }
 }

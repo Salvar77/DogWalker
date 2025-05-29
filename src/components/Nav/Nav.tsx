@@ -94,6 +94,7 @@ export default function Nav({ isOpen, toggleNav }: NavProps) {
         { href: "#team", key: "company.items.team" },
         { href: "#tech", key: "company.items.tech" },
         { href: "#partners", key: "company.items.partners" },
+        { href: "#contact", key: "company.items.contact" },
       ],
     },
   ];

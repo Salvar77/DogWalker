@@ -21,7 +21,8 @@
     "items": {
       "team": "Team",
       "tech": "Tech",
-      "partners": "Partners"
+      "partners": "Partners",
+      "contact": "Contact"
     }
   }
 }

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
 
-import TechBackgroundMain from "@/assets/img/TechBackgroundMain.svg";
+import TechBackgroundMain from "@/assets/img/TechBackgroundMain.png";
 import TechBackgroundImage1 from "@/assets/img/TechBackgroundImage1.svg";
 import TechBackgroundImage2 from "@/assets/img/TechBackgroundImage2.svg";
 import TechRectangle1 from "@/assets/img/TechRectangle1.svg";
