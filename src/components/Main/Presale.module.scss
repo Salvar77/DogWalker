@@ -28,7 +28,7 @@
 
   .ellipse {
     position: absolute;
-    bottom: 10rem;
+    bottom: 8rem;
     left: 0;
     width: 15rem;
     pointer-events: none;
@@ -37,10 +37,9 @@
     &Two {
       position: absolute;
       width: 15rem;
-      bottom: 8rem;
+      bottom: 7rem;
       right: 1rem;
       z-index: 5;
-      backdrop-filter: blur(3px);
       border-radius: 50%;
     }
   }
