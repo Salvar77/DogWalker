@@ -1,5 +1,6 @@
 import Features from "@/components/Main/Features";
 import Hero from "@/components/Main/Hero";
+import Partners from "@/components/Main/Partners";
 import Presale from "@/components/Main/Presale";
 import PriceGrowth from "@/components/Main/PriceGrowth";
 import ReferAFriend from "@/components/Main/ReferAFriend";
@@ -29,6 +30,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
         "features",
         "team",
         "tech",
+        "partners",
       ])),
     },
   };
@@ -50,6 +52,7 @@ export default function Home() {
       <Features />
       <Teams />
       <Tech />
+      <Partners />
     </div>
   );
 }

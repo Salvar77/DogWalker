@@ -70,12 +70,11 @@
       border: none;
       border-radius: 1.2rem;
       cursor: pointer;
-      transition: background, color 0.2s;
+      transition: background 0.2s;
       z-index: 100;
 
       &:hover {
-        background: #ffe6cc;
-        color: $dark-smooth;
+        background: $dark-smooth;
       }
 
       .arrow {
@@ -155,12 +154,11 @@
       border: none;
       border-radius: 1.2rem;
       cursor: pointer;
-      transition: background, color 0.2s;
+      transition: background 0.2s;
       z-index: 100;
 
       &:hover {
-        background: #ffe6cc;
-        color: $dark-smooth;
+        background: $dark-smooth;
       }
     }
   }
@@ -204,6 +202,13 @@
     padding: 1rem;
     box-shadow: $card-shadow;
     min-height: 20rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba($main-color, 0.12);
+      z-index: 1;
+    }
 
     .iconWrapper {
       margin-bottom: 0.5rem;
@@ -223,23 +228,23 @@
   // dekoracyjne prostokąty
   .rect1 {
     position: absolute;
-    top: -4%;
+    top: -2.5%;
     left: 2%;
   }
   .rect2 {
     position: absolute;
-    top: -3%;
+    top: -1%;
     left: 17%;
   }
   .rect3 {
     position: absolute;
-    bottom: -5%;
+    bottom: -3%;
     right: 0;
   }
   .rect4 {
     position: absolute;
-    bottom: -2%;
-    right: 15%;
+    bottom: -1%;
+    right: 13%;
   }
 }
 
@@ -247,32 +252,32 @@
   .tech {
     .bgImage1 {
       top: 7%;
-      left: -28%;
+      left: -36%;
 
       z-index: 10;
     }
     .bgImage2 {
       bottom: 3%;
-      right: -28%;
+      right: -36%;
 
       z-index: 10;
     }
 
     .rect1 {
       top: 10%;
-      left: -20%;
+      left: -22%;
     }
     .rect2 {
       top: 21%;
-      left: -7%;
+      left: -9%;
     }
     .rect3 {
-      bottom: 45%;
-      right: -15%;
+      bottom: 40%;
+      right: -20%;
     }
     .rect4 {
-      bottom: 55%;
-      right: -3%;
+      bottom: 50%;
+      right: -6%;
     }
   }
 }

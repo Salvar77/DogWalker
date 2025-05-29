@@ -66,7 +66,7 @@ const Teams: React.FC = () => {
     <div className={classes.background}>
       <div className={classes.bgWrapper} />
 
-      <section id="teams" className={classes.teams}>
+      <section id="team" className={classes.teams}>
         {/* HEADER */}
         <div className={classes.teams__header}>
           <h2 className={classes.heading}>{t("heading")}</h2>
