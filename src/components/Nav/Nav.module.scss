@@ -123,7 +123,6 @@
 }
 
 .headerMobile {
-  // position: fixed;
   top: 0;
   width: 100%;
   padding: 1rem;
@@ -161,7 +160,7 @@
 
 // ---------- Desktop dropdown ----------
 .menuDesktopItem {
-  position: relative; // wymagane dla absolute dropdown
+  position: relative;
   font-size: 1.6rem;
   cursor: pointer;
 
@@ -283,7 +282,6 @@
   }
 }
 
-// Fade-in animation
 @keyframes fadeIn {
   from {
     opacity: 0;

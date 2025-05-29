@@ -24,7 +24,6 @@ const ReferAFriend = () => {
       <div className={classes.bgWrapper} />
       <section className={classes.refer} id="refer-a-friend">
         <div className={classes.refer__box}>
-          {/* Box One: tytuł + podtytuł + obrazek */}
           <div className={classes.refer__boxOne}>
             <div className={classes.refer__text}>
               <h2 className={classes.heading}>{t("heading")}</h2>
@@ -40,7 +39,6 @@ const ReferAFriend = () => {
             </div>
           </div>
 
-          {/* Box Two: input + przyciski */}
           <div className={classes.refer__boxTwo}>
             <div className={classes.inputGroup}>
               <input

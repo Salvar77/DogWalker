@@ -16,8 +16,8 @@ const Roadmap: React.FC = () => {
   const { t } = useTranslation("roadmap");
   const phases = t("phases", { returnObjects: true }) as Phase[];
   const [isMobile, setIsMobile] = useState(false);
-
   const [isDesktop, setIsDesktop] = useState(false);
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const upd = () => setIsDesktop(window.innerWidth >= 992);
@@ -32,8 +32,6 @@ const Roadmap: React.FC = () => {
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
-
-  const [current, setCurrent] = useState(0);
 
   const desktopSettings = {
     infinite: false,

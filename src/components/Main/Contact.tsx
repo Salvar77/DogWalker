@@ -84,7 +84,6 @@ const Contact: React.FC = () => {
   return (
     <>
       <div className={classes.background}>
-        {/* główne tło */}
         <div className={classes.bgWrapper}>
           <Image
             src={ContactBackgroundMain}
@@ -96,7 +95,6 @@ const Contact: React.FC = () => {
         </div>
 
         <section id="contact" className={classes.contact}>
-          {/* dekoracyjne SVG */}
           <Image
             src={ContactBackgroundImage1}
             alt=""
@@ -110,7 +108,6 @@ const Contact: React.FC = () => {
             priority
           />
 
-          {/* HEADER */}
           <div className={classes.header}>
             <div className={classes.headerContent}>
               <span className={classes.getHelp}>{t("getHelpLabel")}</span>
@@ -202,7 +199,6 @@ const Contact: React.FC = () => {
             </button>
           </form>
 
-          {/* dekoracyjne prostokąty */}
           <Image
             src={ContactRectangle1}
             alt=""

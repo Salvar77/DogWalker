@@ -63,7 +63,6 @@ const Tech: React.FC = () => {
       </div>
 
       <section id="tech" className={classes.tech}>
-        {/* dekoracyjne tła */}
         <Image
           src={TechBackgroundImage1}
           alt=""
@@ -77,7 +76,6 @@ const Tech: React.FC = () => {
           priority
         />
 
-        {/* HEADER */}
         <div className={classes.header}>
           <h2 className={classes.title}>{t("title")}</h2>
           <button className={classes.learnMore}>
@@ -88,19 +86,16 @@ const Tech: React.FC = () => {
           </button>
         </div>
 
-        {/* DLACZEGO BLOCKCHAIN? */}
         <div className={classes.row}>
           <div className={classes.textBlock}>
             <h3 className={classes.label}>{t("blockchainLabel")}</h3>
             <h2 className={classes.heading}>{t("blockchainHeading")}</h2>
 
-            {/* subheading z HTML */}
             <div
               className={classes.subheading}
               dangerouslySetInnerHTML={{ __html: t("blockchainSubheading") }}
             />
 
-            {/* description z paragrafami i listą */}
             <div
               className={classes.description}
               dangerouslySetInnerHTML={{ __html: t("blockchainDescription") }}
@@ -111,7 +106,6 @@ const Tech: React.FC = () => {
           </div>
         </div>
 
-        {/* DLACZEGO BSC? */}
         <div className={classes.rowReverse}>
           <div className={classes.imageBlock}>
             <Image src={TechMain2} alt="" priority />
@@ -132,7 +126,6 @@ const Tech: React.FC = () => {
           </div>
         </div>
 
-        {/* KEY REASONS */}
         <h3 className={classes.reasonsTitle}>{t("reasonsHeading")}</h3>
         <div className={classes.reasonsGrid}>
           {reasons.map((r, i) => (
@@ -152,7 +145,6 @@ const Tech: React.FC = () => {
           ))}
         </div>
 
-        {/* dekoracyjne prostokąty */}
         <Image
           src={TechRectangle1}
           alt=""

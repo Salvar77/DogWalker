@@ -30,7 +30,6 @@ const Presale: React.FC = () => {
 
   return (
     <div className={classes.background}>
-      {/** Full-width background under card */}
       <div className={classes.bgWrapper}>
         <Image
           src={PresaleBackground}
@@ -42,7 +41,6 @@ const Presale: React.FC = () => {
       </div>
 
       <section className={classes.presale} id="pre-sale">
-        {/* Heading and How to Buy button */}
         <div className={classes.header}>
           <h2 className={classes.heading}>{t("heading")}</h2>
           <button className={classes.howToBuy}>
@@ -52,7 +50,6 @@ const Presale: React.FC = () => {
             </span>
           </button>
         </div>
-        {/** Decorative paw traces */}
         <Image
           src={PresaleDogTraces}
           alt="Ślady psa w tle sekcji Pre-sale"
@@ -90,7 +87,6 @@ const Presale: React.FC = () => {
         />
 
         <div className={classes.presale__box}>
-          {/** Box One: Price info + vector */}
           <div className={classes.presale__boxOne}>
             <div className={classes.priceBox}>
               <span className={classes.label}>{t("launchPriceLabel")}</span>
@@ -111,7 +107,6 @@ const Presale: React.FC = () => {
             </div>
           </div>
 
-          {/** Box Three: Progress bar + sold/total */}
           <div className={classes.presale__boxThree}>
             <div className={classes.progress}>
               <div className={classes.bar}>
@@ -129,7 +124,6 @@ const Presale: React.FC = () => {
             </div>
           </div>
 
-          {/** Box Four: Timer */}
           <div className={classes.presale__boxFour}>
             <div className={classes.timer}>
               <div className={classes.timerRow}>
@@ -162,7 +156,6 @@ const Presale: React.FC = () => {
             </div>
           </div>
 
-          {/** Box Five: CTA button */}
           <div className={classes.presale__boxFive}>
             <button className={classes.cta}>
               <span> {t("purchaseCTA")}</span>
@@ -170,7 +163,6 @@ const Presale: React.FC = () => {
           </div>
         </div>
 
-        {/** Footer powered by */}
         <div className={classes.presale__foot}>
           <p className={classes.powered}>
             <span> {t("poweredPrefix")}</span>

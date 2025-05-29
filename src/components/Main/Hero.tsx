@@ -95,8 +95,8 @@ const Hero: React.FC = () => {
           src={Vector2}
           alt=""
           className={classes.vector}
-          width={isMobile ? 100 : 215}
-          height={isMobile ? 100 : 215}
+          width={isMobile ? 125 : 215}
+          height={isMobile ? 125 : 215}
         />
         <div className={classes.phoneTop}>
           <Image

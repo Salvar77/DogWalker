@@ -31,7 +31,6 @@
   padding: 0 1rem;
   color: $dark-smooth;
 
-  // dekoracyjne tła
   .bgImage1 {
     position: absolute;
     top: 5%;
@@ -47,7 +46,6 @@
     pointer-events: none;
   }
 
-  // pierwszy blok (nagłówek + ewentualny obraz)
   .header {
     display: flex;
     flex-direction: column;
@@ -194,7 +192,6 @@
     }
   }
 
-  // dekoracyjne prostokąty
   .rect1 {
     position: absolute;
     top: -8%;

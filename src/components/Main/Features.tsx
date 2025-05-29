@@ -50,7 +50,6 @@ const Features = () => {
       </div>
 
       <div className={classes.features__box}>
-        {/* Lewa kolumna */}
         <div className={classes.features__boxOne}>
           <h3 className={classes.sectionTitle}>{t("sectionTitle")}</h3>
           <ul className={classes.featureList}>
@@ -69,7 +68,6 @@ const Features = () => {
           </ul>
         </div>
 
-        {/* Prawa kolumna */}
         <div className={classes.features__boxTwo}>
           <Image
             src={FeaturesPhoneImage}
@@ -109,7 +107,6 @@ const Features = () => {
         </div>
       </div>
 
-      {/* Elipsy dekoracyjne */}
       <Image
         src={FeaturesEllipse1}
         alt=""

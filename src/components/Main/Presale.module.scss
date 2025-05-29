@@ -212,7 +212,6 @@
       gap: 0.75rem;
     }
 
-    /* rząd jednostek */
     .timerRow {
       display: flex;
       align-items: baseline;
@@ -220,14 +219,12 @@
       font-weight: bold;
     }
 
-    /* pojedyncza para liczba+etykieta */
     .unitGroup {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    /* biała kostka z liczbą */
     .unitBox {
       background: #fff;
       border-radius: 25%;
@@ -240,7 +237,6 @@
       font-size: 1rem;
     }
 
-    /* etykieta pod kostką */
     .unitLabel {
       margin-top: 0.25rem;
       font-size: 0.85rem;
@@ -249,7 +245,6 @@
       text-transform: capitalize;
     }
 
-    /* dwukropek pomiędzy grupami */
     .colon {
       color: #333;
       line-height: 1;
@@ -268,7 +263,6 @@
     .cta {
       display: flex;
       align-items: center;
-      // gap: 0.9rem;
       width: 100%;
       justify-content: center;
       padding: 1.2rem 1rem;
@@ -427,7 +421,6 @@
       grid-row: 2;
     }
 
-    // Prawa kolumna: BoxFour obok BoxOne, BoxFive obok BoxThree
     &__boxFour {
       grid-column: 2;
       grid-row: 1;

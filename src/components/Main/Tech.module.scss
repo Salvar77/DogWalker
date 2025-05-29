@@ -31,7 +31,6 @@
   color: $dark-smooth;
   padding: 0 1rem;
 
-  // dekoracyjne tła
   .bgImage1 {
     position: absolute;
     top: 5%;
@@ -85,7 +84,6 @@
     }
   }
 
-  // bloki tekst + obraz
   .row {
     display: flex;
     flex-direction: column;
@@ -168,7 +166,6 @@
     text-align: center;
   }
 
-  // 6 kafelków reasons
   .reasonsTitle {
     text-align: center;
     font-size: 1.75rem;
@@ -225,7 +222,6 @@
     }
   }
 
-  // dekoracyjne prostokąty
   .rect1 {
     position: absolute;
     top: -2.5%;

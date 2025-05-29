@@ -52,8 +52,6 @@ const Staking = () => {
           </button>
         </div>
 
-        {/** Decorative paw traces */}
-
         <Image
           src={StakingRectangleSmall}
           alt="Mały dekoracyjny prostokąt w tle sekcji staking"
@@ -131,7 +129,6 @@ const Staking = () => {
                 <small>{t("perEthBlockLabel")}</small>
               </span>
               <div className={classes.logoWrapper}>
-                {/* importuj swój logo DogWalker */}
                 <Image src={DogWalkerLogo} alt="DogWalker" width={160} />
               </div>
             </div>

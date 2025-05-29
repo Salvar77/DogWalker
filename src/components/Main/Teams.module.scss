@@ -80,7 +80,6 @@
     margin-bottom: 2rem;
     padding: 1rem;
 
-    /* STYL DLA SLICK NA DESKTOPIE */
     .slick-list {
       overflow: visible;
     }
@@ -145,7 +144,6 @@
     }
   }
 
-  /* dekoracyjne SVG */
   .rectangle1 {
     position: absolute;
     top: -5%;
@@ -175,7 +173,6 @@
     border-radius: 50%;
   }
 
-  /* DESKTOP (≥992px) */
   @media (min-width: 992px) {
     &__header {
       flex-direction: row;

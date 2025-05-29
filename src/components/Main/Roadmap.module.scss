@@ -203,7 +203,6 @@
   }
 }
 
-// tablet+
 @media (min-width: 768px) {
   .roadmap {
     padding: 0 1.5rem;
@@ -215,7 +214,6 @@
   }
 }
 
-// desktop+
 @media (min-width: 992px) {
   .roadmap {
     padding: 0 2rem;
@@ -231,7 +229,6 @@
       position: relative;
       width: 100vw;
       left: 0;
-      // transform: translateX(-50%);
       overflow: hidden;
 
       .slick-list {

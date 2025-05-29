@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import classes from "./BurgerMenu.module.scss";
 
 type BurgerMenuProps = {

@@ -163,7 +163,6 @@
   }
 }
 
-/* dekoracje */
 .rect1,
 .rect2,
 .rect3,
@@ -202,7 +201,6 @@
 .dogIcon {
   bottom: -20%;
   right: 2.2rem;
-  // transform: translateX(-50%);
 }
 .rocketIcon {
   top: -11%;
@@ -229,7 +227,7 @@
     }
 
     tbody tr:first-child td {
-      border-top: 1rem solid transparent; // zrobi przerwę 1rem
+      border-top: 1rem solid transparent;
     }
   }
 
@@ -258,7 +256,6 @@
     bottom: 22%;
     right: -22%;
     transform: translateX(-50%);
-    // z-index: 100;
   }
   .rocketIcon {
     top: 53%;

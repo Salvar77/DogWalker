@@ -28,6 +28,8 @@ const Teams: React.FC = () => {
   const members = t("members", { returnObjects: true }) as Member[];
 
   const [isMobile, setIsMobile] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 992);
@@ -35,9 +37,6 @@ const Teams: React.FC = () => {
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
-
-  const [isDesktop, setIsDesktop] = useState(false);
-  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const upd = () => setIsDesktop(window.innerWidth >= 992);
@@ -54,7 +53,6 @@ const Teams: React.FC = () => {
     arrows: false,
     dots: false,
     draggable: true,
-
     autoplay: true,
     autoplaySpeed: 3000,
     afterChange: (idx: number) => setCurrent(idx),
@@ -181,7 +179,6 @@ const Teams: React.FC = () => {
           )}
         </div>
 
-        {/* dekoracyjne SVG */}
         <Image
           src={TeamRectangle1}
           alt=""

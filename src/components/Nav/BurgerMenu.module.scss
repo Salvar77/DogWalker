@@ -1,6 +1,5 @@
 @import "../../styles/colors";
 
-// ---------- Main hamburger button ----------
 .hamburger {
   padding: 15px 15px;
   transition: background-color 0.5s ease;
@@ -69,7 +68,6 @@
   top: -10px;
 }
 
-// Bottom line (50% width)
 .hamburgerInner::after {
   content: "";
   width: 20px;
